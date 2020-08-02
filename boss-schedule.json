@@ -1,0 +1,16 @@
+{
+  "bosses": [
+    {
+      "name": "Kzarka",
+      "time": ["weekly timings"],
+      "location": "Serendia Shrine",
+      "image": "image link here"
+    },
+    {
+      "name": "Karanda",
+      "time": ["weekly timings"],
+      "location": "Karanda Ridge",
+      "image": "image link here"
+    }
+  ]
+}
