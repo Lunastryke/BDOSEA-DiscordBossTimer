@@ -1,22 +1,30 @@
 // Instantiate cron jobs here
-const CronJob = require('cron').CronJob;
-const data = require('./boss-schedule.json');
+const CronJob = require("cron").CronJob;
+const { formatPost } = require('./helpers/postFormat')
+const fs = require('fs')
 
-function instantiateCronJobs(data) {
-  createCronJob('test');
+async function instantiateCronJobs(channel) {
+  const bossData = fs.readFileSync('boss-schedule.json');
+  const formattedBossData = JSON.parse(bossData);
+  const bosses  = formattedBossData.bosses
+  for (idx in bosses) {
+    createCronJob(bosses[idx], channel)
+  }
 }
 
-function createCronJob(jobDetails, channel) {
+async function createCronJob(jobDetails, channel) {
+  const {name, time, location} = jobDetails
+  const formattedString = formatPost(name, time, location);
   var job = new CronJob(
-    '* * * * * *',
-    function () {
-      channel.send('test');
+    "* * * * * *",
+    function() {
+      channel.send(formattedString)
     },
     null,
     true,
-    'Asia/Singapore'
+    "Asia/Singapore"
   );
-  job.start();
+  // job.start();
 }
 
 module.exports.instantiateCronJobs = instantiateCronJobs;

@@ -2,7 +2,7 @@
   "bosses": [
     {
       "name": "Kzarka",
-      "time": ["weekly timings"],
+      "time": ["time 1", "time 2"],
       "location": "Serendia Shrine",
       "image": "image link here"
     },
