@@ -16,7 +16,7 @@ async function createCronJob(jobDetails, channel) {
   const {name, time, location} = jobDetails
   const formattedString = formatPost(name, time, location);
   var job = new CronJob(
-    "* * * * * *",
+    "1 * * * * *",
     function() {
       channel.send(formattedString)
     },

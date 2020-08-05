@@ -28,7 +28,8 @@
   "homepage": "https://github.com/Lunastryke/BDOSEA-DiscordBossTimer#readme",
   "dependencies": {
     "cron": "^1.8.2",
-    "discord.js": "^12.2.0"
+    "discord.js": "^12.2.0",
+    "moment": "^2.27.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
