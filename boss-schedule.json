@@ -1,15 +1,57 @@
 {
   "bosses": [
     {
-      "name": "Kzarka",
-      "time": ["time 1", "time 2"],
-      "location": "Serendia Shrine",
+      "name": "Garmoth",
+      "time": ["weekly timings"],
+      "location": "Garmoth's Lair",
       "image": "image link here"
     },
     {
       "name": "Karanda",
       "time": ["weekly timings"],
       "location": "Karanda Ridge",
+      "image": "image link here"
+    },
+    {
+      "name": "Kutum",
+      "time": ["weekly timings"],
+      "location": "Scarlet Sand Chamber",
+      "image": "image link here"
+    },
+    {
+      "name": "Kzarka",
+      "time": ["time 1", "time 2"],
+      "location": "Serendia Shrine",
+      "image": "image link here"
+    },
+    {
+      "name": "Muraka",
+      "time": ["weekly timings"],
+      "location": "Idk where muraka stays",
+      "image": "image link here"
+    },
+    {
+      "name": "Nouver",
+      "time": ["weekly timings"],
+      "location": "Desert?",
+      "image": "image link here"
+    },
+    {
+      "name": "Offin",
+      "time": ["weekly timings"],
+      "location": "Mirumok Ruins",
+      "image": "image link here"
+    },
+    {
+      "name": "Quint",
+      "time": ["weekly timings"],
+      "location": "I dont do quint",
+      "image": "image link here"
+    },
+    {
+      "name": "Vell",
+      "time": ["weekly timings"],
+      "location": "Margoria (Vell's Realm)",
       "image": "image link here"
     }
   ]

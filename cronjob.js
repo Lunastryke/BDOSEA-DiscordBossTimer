@@ -3,6 +3,8 @@ const CronJob = require("cron").CronJob;
 const { formatPost } = require('./helpers/postFormat')
 const fs = require('fs')
 
+const cronjobs = []
+
 async function instantiateCronJobs(channel) {
   const bossData = fs.readFileSync('boss-schedule.json');
   const formattedBossData = JSON.parse(bossData);
@@ -24,6 +26,7 @@ async function createCronJob(jobDetails, channel) {
     true,
     "Asia/Singapore"
   );
+  cronjobs.push(job);
   // job.start();
 }
 

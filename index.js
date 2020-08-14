@@ -4,16 +4,13 @@ const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
 const { instantiateCronJobs } = require('./cronjob');
 const { promiseTimeout } = require('./helpers/promiseTimeout');
+const { Guilds } = require('./db.js')
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
+client.login(token);
 
-const discordChannelIds = [];
-const discordTextChannels = [];
-
-async function login() {
-  await client.login(token);
-}
+const discordTextChannelIds = [];
 
 const commandFiles = fs
   .readdirSync('./commands')
@@ -56,5 +53,6 @@ client.on('message', (message) => {
   }
 });
 
-login();
-// scheduleAnnouncements();
+client.once('ready', () => {
+  Guilds.sync();
+})

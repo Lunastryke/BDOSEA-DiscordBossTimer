@@ -1,6 +1,6 @@
 module.exports = {
   name: 'info',
-  description: 'Bot command information',
+  description: 'Bot information',
   args: true,
   execute(message, args) {
     if (args[0] === 'foo') {
